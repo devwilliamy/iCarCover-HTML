@@ -1,0 +1,16 @@
+{
+  "name": "icarcover-html",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ebay-dynamic-descriptions.js",
+  "scripts": {
+    "start": "node ebay-dynamic-descriptions.js",
+    "gen": "npx tsc generateDescription.ts && node generateDescription.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^5.5.3"
+  }
+}
