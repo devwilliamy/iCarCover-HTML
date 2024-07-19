@@ -22,18 +22,12 @@
     <style>
       body {
         -webkit-text-size-adjust: 100%;
-        /* margin: 15px; */
         max-width: 1160px;
         display: flex;
         flex-direction: column;
         align-items: center;
         padding: 0;
-        display: flex;
-        flex-direction: column;
         flex: 1;
-        /* font-family: Arial, sans-serif; */
-        /* font-family: "Market Sans", Arial, sans-serif; */
-        /* font-family: "Amazon Ember", Arial, sans-serif; */
         font-family: "Roboto", sans-serif;
         color: #0f1111;
         text-rendering: optimizelegibility;
@@ -42,34 +36,23 @@
         -moz-osx-font-smoothing: grayscale;
         text-shadow: none;
       }
+
       p,
-      h1 {
-        font-weight: 700;
-        margin-top: 0;
-        margin-bottom: 0;
-      }
+      h1,
       h2 {
         font-weight: 700;
         margin-top: 0;
         margin-bottom: 0;
       }
+
       ul {
         padding-left: 20px;
-      }
-
-      .numberListItem::before {
-        content: none;
-        position: absolute;
-        left: 0;
-        top: 0;
-        font-size: 20px;
-        line-height: 1;
-        color: #000;
       }
 
       li {
         margin: 5px 0;
       }
+
       li::marker {
         font-weight: 400;
       }
@@ -78,73 +61,15 @@
         display: block;
       }
 
-      .intro-banner-padding {
-        padding-left: 20px;
-        padding-right: 20px;
-      }
       .videoContainer {
         margin-bottom: 110px;
       }
+
       .video {
         width: 100%;
         height: auto;
       }
-      .perfect-fit-section {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-      }
-      .intro-header {
-        color: white;
-        font-size: 32px;
-        padding-bottom: 20px;
-        padding-top: 20px;
-      }
-      .intro-header-text {
-        color: white;
-        font-size: 16px;
-        line-height: 1.4em;
-        opacity: 1 !important;
-        margin-bottom: 20px;
-        font-weight: 500 !important;
-      }
-      .sub-header {
-        font-size: 32px;
-        padding-top: 40px;
-        padding-bottom: 40px;
-        text-align: center;
-        font-weight: 700;
-      }
 
-      .sub-header2 {
-        text-align: center;
-        font-size: 22px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        font-weight: 700;
-      }
-
-      .ultimateToolkitHeader {
-        font-size: 18px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        font-weight: 800;
-      }
-      .intro-banner {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        left: 40px;
-        background: black;
-        max-width: 45%;
-      }
-      .mobile-intro-banner {
-        display: none;
-      }
-
-      .ultimateToolkitSection {
-        margin-bottom: 40px;
-      }
       .tool-kit-grid {
         display: grid;
         gap: 20px;
@@ -152,14 +77,14 @@
         margin-left: 60px;
         margin-right: 60px;
       }
+
       .tool-kit-grid-item {
         display: grid;
         grid-template-rows: 0.5fr 0.2fr 0.3fr;
         width: 100%;
         margin-top: 14px;
-
-        /* gap: 20px; */
       }
+
       .grid-header,
       .package-includes-item-text h3 {
         font-family: "Rubik", sans-serif;
@@ -169,6 +94,7 @@
         font-size: 24px;
         line-height: 26px;
       }
+
       .grid-description,
       .package-includes-item-text p {
         font-size: 16px;
@@ -179,159 +105,16 @@
         color: #707070;
       }
 
-      .stayDryGrid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 80px;
-      }
-      .protectionGrid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 80px;
-      }
-
-      .stayDryItem {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        /* align-items: center; */
-      }
-      .stayDryItemHeader {
-        font-size: 20px;
-        font-weight: 700;
-      }
-      .stayDryDescriptionContainer {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        padding-top: 20px;
-        padding-bottom: 20px;
-      }
-      .stayDryItemDescription {
-        font-size: 16px;
-        line-height: 1.4em;
-        font-weight: 500 !important;
-      }
-
-      .listContainer {
-        font-size: 15px;
-        font-weight: 700;
-        padding: 20px;
-      }
-      .bulletList {
-        list-style-type: disc;
-        list-style-position: inside;
-        padding: 0;
-        margin: 0;
-        width: 100%;
-      }
-      .numberList {
-        display: flex;
-        flex-direction: column;
-        list-style-type: decimal;
-        list-style-position: inside;
-        padding: 0;
-        margin: 0;
-        width: 100%;
-      }
-      .listTitle {
-        font-size: 18px;
-        margin-bottom: 20px;
-      }
       .image {
         width: 100%;
         height: auto;
-      }
-
-      .QAContainer {
-        display: flex;
-        padding-top: 80px;
-        padding-bottom: 80px;
-        gap: 10px;
-        width: 100%;
-        flex-direction: column;
-      }
-
-      .dropdownContainer {
-        transition: all 0.3s ease;
-        cursor: pointer;
-        padding: 10px;
-        border: 2px solid #e6e6e6;
-        border-radius: 3px;
-      }
-      .dropdown {
-        display: grid;
-        grid-template-columns: auto 1fr auto;
-        align-items: center;
-        gap: 10px;
-      }
-      .image-section {
-        position: relative;
-        display: flex;
-        width: 100%;
-      }
-      .qBoxContainer {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-      }
-      .qBox {
-        border-radius: 3px;
-        background: #505050;
-        color: white;
-        line-height: 40px;
-        font-size: 25px;
-        width: 80px;
-        min-width: 80px;
-        height: 40px;
-
-        text-align: center;
-      }
-      .qText {
-        font-size: 20px;
-      }
-      .aBoxContainer {
-        position: relative;
-        display: flex;
-        align-items: start;
-        gap: 10px;
-      }
-      .aBox {
-        z-index: -1;
-        border-radius: 3px;
-        border-top-left-radius: 0px;
-        border-top-right-radius: 0px;
-        margin-top: -2px;
-        background: #f5a623;
-        color: white;
-        line-height: 40px;
-        font-size: 25px;
-        min-width: 80px;
-        min-height: 40px;
-        width: 80px;
-        height: 40px;
-        text-align: center;
-      }
-      .aText {
-        font-size: 18px;
-        margin-top: 9px;
-        font-weight: 500 !important;
-      }
-      .chevron {
-        rotate: 180deg;
-      }
-      .chevronPoly {
-        fill: #7cb8cf;
-      }
-      .waterproofSnowproof {
-        margin-top: 20px;
       }
 
       .hero-feature-section {
         padding-top: 53px;
         display: flex;
         align-items: center;
-        background-color: #f5f5f5; /* Adjust this color as needed */
+        background-color: #f5f5f5;
       }
 
       .hero-text-section {
@@ -340,18 +123,16 @@
       }
 
       .hero-text-section-left {
-        padding: 60px 24px 60px 60px;
+        padding: 36px 18px 36px 36px;
       }
 
       .hero-text-section-right {
-        padding: 60px 60px 60px 24px;
+        padding: 36px 36px 36px 18px;
       }
 
       .hero-text-section-extra-padding,
       .half-hero-text-section {
         height: 100%;
-        margin: 100px 100px;
-        min-width: 370px;
       }
 
       .hero-text-section h2,
@@ -383,6 +164,7 @@
         height: auto;
         object-fit: cover;
       }
+
       .package-includes-section {
         display: flex;
         align-items: flex-start;
@@ -390,24 +172,10 @@
         background-color: #ffffff;
       }
 
-      .car-protection-section {
-        display: flex;
-        align-items: center;
-        padding: 40px;
-        background-color: #f5f5f5;
-      }
-
-      .car-protection-section .text-section {
-        flex: 1;
-        padding: 20px;
-        background-color: #000;
-        color: #fff;
-      }
-
       .text-section {
         flex: 2;
         margin-right: 20px;
-        color: #000; /* Ensure text color contrasts well with background */
+        color: #000;
       }
 
       .text-section h2 {
@@ -423,18 +191,18 @@
       .package-includes-item-number {
         min-width: 46px;
         height: 46px;
-        background-color: #e0e0e0; /* Gray background */
-        color: #767676; /* Text color */
-        border-radius: 50%; /* Circle shape */
+        background-color: #e0e0e0;
+        color: #767676;
+        border-radius: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
         font-family: "Rubik", sans-serif;
         font-weight: 600;
-        margin-top: 20px;
-        margin-right: 15px; 
-        line-height: 26px; /* Ensure text is centered vertically */
-        font-size: 26px; /* Consistent font size */
+        margin-top: 14px;
+        margin-right: 15px;
+        line-height: 26px;
+        font-size: 26px;
       }
 
       .image-section {
@@ -450,25 +218,12 @@
         object-fit: cover;
       }
 
-      .car-protection-section {
-        position: relative;
-        width: 100%;
-        height: 467px;
-
-        /* overflow: hidden; */
-      }
-
-      .car-protection-section .overlay {
-        position: relative;
-        z-index: 2;
-        padding: 40px;
-      }
-
       .car-protection-section .text-section {
         max-width: 477px;
         background-color: #1a1a1a;
         color: #fff;
         padding: 20px;
+        margin-right: 0px;
         border-radius: 8px;
       }
 
@@ -488,14 +243,6 @@
         line-height: 22px;
       }
 
-      .car-protection-section .image-section {
-        position: absolute;
-        top: 0;
-        left: 0;
-        /* width: 100%; */
-        height: 100%;
-        z-index: 1;
-      }
       .car-protection-section .image-section picture,
       .car-protection-section .image-section img {
         width: 100%;
@@ -511,6 +258,7 @@
         display: flex;
         align-items: center;
         max-height: 400px;
+        width: 100%;
       }
 
       .half-hero-text-section {
@@ -521,6 +269,7 @@
         background-color: #f5f5f5;
         margin-top: -5px;
         padding-top: 80px;
+        width: 100%;
       }
 
       .enhanced-feature-column {
@@ -538,17 +287,20 @@
         line-height: 66px;
         padding-bottom: 32px;
       }
+
       .grid-image {
         width: 100%;
         height: 245px;
         margin-bottom: 16px;
       }
+
       .grid-text-box {
         background-color: #ffffff;
         padding: 30px;
         min-height: 168px;
         max-height: 168px;
       }
+
       .package-includes-text-section {
         display: flex;
         flex-direction: column;
@@ -561,54 +313,63 @@
         display: flex;
         flex-direction: column;
       }
-    </style>
-    <!-- v Mobile Styling v -->
-    <style>
-      @media (max-width: 650px) {
+
+      @media (min-width: 1073px) {
+        .hero-text-section-extra-padding,
+        .half-hero-text-section {
+          margin: 100px 100px;
+          min-width: 370px;
+        }
+
+        .car-protection-section {
+          position: relative;
+          width: 100%;
+        }
+
+        .car-protection-section .overlay {
+          position: absolute;
+          z-index: 2;
+          left: 50px;
+          top: 122px;
+        }
+      }
+
+      @media (min-width: 953px) and (max-width: 1074px) {
+        .half-hero-text-section {
+          width: 50%;
+          min-width: none;
+          margin: 10px 10px;
+        }
+      }
+
+      @media (max-width: 1074px) {
         body {
-          -webkit-text-size-adjust: 100%;
-          margin: 15px;
-          max-width: 1464px;
+          max-width: 1074px;
+        }
+
+        .hero-feature-section,
+        .package-includes-section {
           display: flex;
+          flex-direction: column-reverse;
+          align-items: normal;
+        }
+
+        #easy-access-section {
           flex-direction: column;
-          align-items: center;
-          padding: 0;
-          display: flex;
-          flex-direction: column;
-          flex: 1;
-          /* font-family: Arial, sans-serif; */
-          /* font-family: "Market Sans", Arial, sans-serif; */
-          /* font-family: "Amazon Ember", Arial, sans-serif; */
-          font-family: "Roboto", sans-serif;
-          color: #0f1111;
-          text-rendering: optimizelegibility;
-          word-break: break-word;
-          -webkit-font-smoothing: antialiased;
-          -moz-osx-font-smoothing: grayscale;
-          text-shadow: none;
+          align-items: self-start;
         }
-        p,
-        h1 {
-          margin-top: 0;
-          margin-bottom: 0;
+
+        .hero-feature-section {
+          padding: 26px 0;
         }
-        h2 {
-          margin-top: 0;
-          margin-bottom: 0;
+
+        .package-includes-section {
+          padding: 0px;
         }
+
         ul {
           display: flex;
           flex-direction: column;
-        }
-
-        .numberListItem::before {
-          content: none;
-          position: absolute;
-          left: 0;
-          top: 0;
-          font-size: 20px; /* Adjust this value as needed */
-          line-height: 1; /* Ensures bullet point stays in the middle */
-          color: #000; /* Bullet point color */
         }
 
         li {
@@ -617,82 +378,25 @@
         }
 
         li span {
-          display: block;
           text-size-adjust: 100%;
         }
-        .section {
-          box-sizing: border-box;
-        }
-        .intro-banner-padding {
-          padding-left: 20px;
-          padding-right: 20px;
-        }
+
         .videoContainer {
           margin-bottom: 60px;
         }
-        .video {
-          width: 100%;
-          height: auto;
-        }
-        .intro-header {
-          color: white;
-          font-size: 22px;
-          padding-bottom: 20px;
-          padding-top: 20px;
-        }
-        .intro-header-text {
-          color: white;
-          font-size: 15px;
-          margin-bottom: 20px;
-          line-height: 21px;
-          font-weight: 500 !important;
-        }
-        .sub-header {
-          font-size: 22px;
-          margin-top: 20px;
-          margin-bottom: 20px;
-          line-height: 26.4px;
-          padding: 0;
-          font-weight: 800;
-        }
 
-        .sub-header2 {
-          text-align: center;
-          font-size: 22px;
-          margin-top: 20px;
-          margin-bottom: 20px;
-          font-weight: 700;
-        }
-
-        .ultimateToolkitHeader {
-          font-size: 18px;
-          margin-top: 20px;
-          margin-bottom: 20px;
-          font-weight: 800;
-        }
-        .intro-banner {
-          display: none;
-          background: black;
-          opacity: 1;
-          max-width: 100%;
-        }
-        .mobile-intro-banner {
-          display: block;
-          background: black;
-          opacity: 1;
-          max-width: 100%;
-        }
         .tool-kit-grid {
-          display: grid;
-          gap: 20px;
-          grid-template-columns: 1fr 1fr;
-          padding: 0;
+          display: flex;
+          flex-direction: column;
+          gap: 0px;
+          margin: 16px 16px;
         }
+
         .tool-kit-grid-item {
-          display: grid;
-          grid-template-rows: 0.1fr 0.1fr auto;
+          display: flex;
+          flex-direction: column;
           width: 100%;
-          gap: 10px;
+          gap: 0px;
         }
 
         .grid-header {
@@ -701,162 +405,183 @@
           font-size: 16px;
           font-weight: 700;
         }
+
         .grid-description {
           font-size: 14px;
-          font-weight: 500 !important;
+          font-weight: 500;
         }
 
-        .stayDryGrid {
-          display: grid;
-          grid-template-columns: 1fr;
-          gap: 0;
-        }
-        .protectionGrid {
-          display: grid;
-          grid-template-columns: 1fr;
-          gap: 0;
-        }
-
-        .stayDryDescriptionContainer {
-          display: flex;
-          flex-direction: column;
-          gap: 14px;
-          padding: 20px;
-        }
-        .stayDryItem {
-          display: flex;
-          flex-direction: column;
-          width: 100%;
-          align-items: center;
-        }
-        .stayDryItemHeader {
-          font-size: 20px;
-          font-weight: 700;
-        }
-        .stayDryItemDescription {
-          font-size: 16px;
-          font-weight: 500 !important;
-        }
-        .protectionItem {
-          display: flex;
-          flex-direction: column;
-          width: 100%;
-        }
-        .enhanced-feature-column {
+        .car-protection-section {
           display: flex;
           flex-direction: column;
           align-items: center;
+          background-color: #f5f5f5;
         }
 
-        .listContainer {
-          font-size: 15px;
-          font-weight: 700;
-          padding: 20px;
-        }
-        .bulletList {
-          list-style-type: disc;
-          list-style-position: inside;
-          padding: 0;
-          margin: 0;
+        .car-protection-section .overlay {
+          display: flex;
+          flex: 1;
+          z-index: 2;
+          margin-top: -50px;
           width: 100%;
+          color: #fff;
+          max-width: 1074px;
         }
-        .numberList {
+
+        .car-protection-section .text-section {
           display: flex;
           flex-direction: column;
-          list-style-type: decimal;
-          list-style-position: inside;
-          padding: 0;
-          margin: 0;
+          max-width: none;
+          padding: 24px;
+          border-radius: 0px;
+        }
+
+        .image-section {
           width: 100%;
+          max-width: 1200px;
+          display: flex;
+          justify-content: center;
         }
-        .listTitle {
-          font-size: 15px;
-          margin-bottom: 30px;
-        }
-        .image {
+
+        .image-section img {
           width: 100%;
           height: auto;
         }
 
-        .QAContainer {
-          padding-top: 20px;
-          padding-bottom: 20px;
-        }
-        .dropdownContainer {
-          transition: all 0.3s ease;
-          padding: 10px;
-          border: 2px solid #e6e6e6;
-          border-radius: 3px;
-          cursor: pointer;
-        }
-        .dropdown {
-          display: grid;
-          grid-template-columns: auto 1fr auto;
-          /* align-items: center; */
-          cursor: pointer;
-          gap: 10px;
-        }
-        .qBoxContainer {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-        }
-        .qBox {
-          border-radius: 3px;
-          background: #505050;
-          color: white;
-          line-height: 40px;
+        .grid-header,
+        .package-includes-item-text h3 {
+          margin-bottom: 16px;
           font-size: 20px;
-          width: 40px;
-          min-width: 40px;
-          aspect-ratio: 1/1;
-          text-align: center;
+          line-height: 26px;
         }
-        .qText {
-          font-size: 18px;
-        }
-        .aBoxContainer {
-          position: relative;
-          display: flex;
-          align-items: start;
-          gap: 10px;
-        }
-        .aBox {
-          z-index: -1;
-          border-radius: 3px;
-          border-top-left-radius: 0px;
-          border-top-right-radius: 0px;
-          margin-top: -2px;
-          background: #f5a623;
-          color: white;
-          line-height: 40px;
-          font-size: 20px;
-          min-width: 40px;
-          max-width: 40px;
-          min-height: 40px;
-          max-height: 40px;
-          aspect-ratio: 1/1;
-          text-align: center;
-        }
-        .aText {
+
+        .grid-description,
+        .package-includes-item-text p {
           font-size: 14px;
-          margin-top: 9px;
-          font-weight: 500 !important;
+          font-weight: 400;
+          line-height: 22px;
         }
-        .chevron {
-          rotate: 180deg;
+      }
+
+      @media (max-width: 952px) {
+        .car-protection-section .overlay {
+          margin-top: -25px;
         }
-        .chevronPoly {
-          fill: #7cb8cf;
+
+        .car-protection-section .text-section {
+          padding: 16px;
         }
-        .waterproofSnowproof {
-          margin-top: 0;
+
+        .car-protection-section .text-section h2 {
+          font-size: 22px;
+          line-height: 28px;
+        }
+
+        .car-protection-section .text-section p {
+          font-weight: 300;
+          font-size: 15px;
+          line-height: 20px;
+        }
+
+        .hero-text-section h2,
+        .half-hero-text-section h2 {
+          font-size: 22px;
+          margin-bottom: 22px;
+          line-height: 28px;
+        }
+
+        .hero-text-section p,
+        .half-hero-text-section p {
+          font-size: 15px;
+          line-height: 20px;
+          font-weight: 400;
+        }
+
+        .hero-text-section-left {
+          padding: 16px;
+        }
+
+        .hero-text-section-right {
+          padding: 16px;
+        }
+
+        .half-hero-feature-section {
+          flex-direction: column;
+          max-height: none;
+        }
+
+        .half-hero-text-section {
+          flex-direction: column;
+          min-width: none;
+          padding: 36px 16px;
+        }
+
+        .half-hero-image-section {
+          display: flex;
+        }
+
+        .half-hero-image-section img {
+          width: 100%;
+          height: auto;
+        }
+
+        #scratch-free-section {
+          flex-direction: column-reverse;
+        }
+
+        .enhanced-feature-column h2,
+        .package-includes-section h2 {
+          font-family: "Rubik", sans-serif;
+          font-size: 26px;
+          line-height: 34px;
+          padding-bottom: 24px;
+        }
+
+        .grid-text-box {
+          background-color: #ffffff;
+          padding: 26px 16px;
+          min-height: 0px;
+          max-height: none;
+        }
+
+        .package-includes-text-section h2 {
+          text-align: center;
+        }
+
+        .grid-header,
+        .package-includes-item-text h3 {
+          margin-bottom: 16px;
+          font-size: 20px;
+          line-height: 20px;
+        }
+
+        .grid-description,
+        .package-includes-item-text p {
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 22px;
+        }
+
+        .package-includes-text-section {
+          padding: 16px;
+        }
+
+        .package-image-section {
+          padding-top: 0px;
+        }
+
+        .package-includes-item-number {
+          min-width: 30px;
+          height: 30px;
+          line-height: 20px;
+          font-size: 16px;
+          margin-top: 16px;
         }
       }
     </style>
   </head>
   <body>
-    <div class="videoContainer">
+    <!-- <div class="videoContainer">
       <video
         class="video"
         autoplay=""
@@ -868,18 +593,8 @@
         src="https://advanceparts.sfo3.cdn.digitaloceanspaces.com/ebay/car_03_description/advanceparts_final_m.mp4"
         poster=""
       ></video>
-    </div>
+    </div> -->
     <section class="car-protection-section">
-      <div class="overlay">
-        <div class="text-section">
-          <h2>Perfect Fit,<br />Maximum Protection</h2>
-          <p>
-            Custom-fit car covers ensure superior protection, keeping your
-            vehicle fresh and new. Enjoy all-weather durability, waterproof
-            performance, and a snug fit.
-          </p>
-        </div>
-      </div>
       <div class="image-section">
         <picture>
           <source
@@ -893,6 +608,16 @@
             alt="High-Quality Premium Car Cover"
           />
         </picture>
+      </div>
+      <div class="overlay">
+        <div class="text-section">
+          <h2>Perfect Fit,<br />Maximum Protection</h2>
+          <p>
+            Custom-fit car covers ensure superior protection, keeping your
+            vehicle fresh and new. Enjoy all-weather durability, waterproof
+            performance, and a snug fit.
+          </p>
+        </div>
       </div>
     </section>
     <section class="hero-feature-section" id="mold-free-section">
@@ -981,7 +706,7 @@
       </div>
     </section>
 
-    <section class="half-hero-feature-section" id="ultimate-protection-section">
+    <section class="half-hero-feature-section" id="scratch-free-section">
       <div class="half-hero-text-section">
         <h2>
           Scratch-Free <br />
@@ -1075,7 +800,8 @@
         <div class="package-includes-item">
           <div class="package-includes-item-number">2</div>
           <div class="package-includes-item-text">
-            <h3>1 Antenna Patch<br />1 Pair of grommets</h3>
+            <h3>1 Antenna Patch</h3>
+            <h3>1 Pair of grommets</h3>
             <p>
               Worried about fitting the cover over the antenna? Our antenna
               patch and grommets make it easy to create a custom antenna hole
@@ -1097,14 +823,14 @@
       <div class="package-image-section">
         <picture class="">
           <source
-            class=""
+            class="image"
             srcset="
               https://icarcover.sfo3.cdn.digitaloceanspaces.com/website/description/feature/package.webp
             "
             media="(min-width: 601px)"
           />
           <img
-            class=""
+            class="image"
             src="https://icarcover.sfo3.cdn.digitaloceanspaces.com/website/description/feature/package.webp"
             alt="Keeps You Dry, Breathable by Design"
           />
