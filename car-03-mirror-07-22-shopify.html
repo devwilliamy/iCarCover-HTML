@@ -220,6 +220,10 @@
       object-fit: cover;
     }
 
+    .image-section-reverse {
+      flex-direction: row-reverse;
+    }
+
     .car-protection-section .text-section {
       max-width: 477px;
       background-color: #1a1a1a;
@@ -655,7 +659,7 @@
 
       <section class="hero-feature-section" id="easy-access-section">
         <div class="hero-image-section">
-          <picture class="image-section">
+          <picture class="image-section image-section-reverse">
             <source
               class="image-section"
               srcset="
@@ -714,16 +718,18 @@
       </section>
 
       <section class="half-hero-feature-section" id="scratch-free-section">
-        <div class="half-hero-text-section">
-          <h2>
-            Scratch-Free <br />
-            Soft Inner Layer
-          </h2>
-          <p>
-            The interior of our car cover is designed with a soft inner lining
-            that prevents scratches, keeping your car's paint looking fresh and
-            new.
-          </p>
+        <div class="half-hero-text-padding">
+          <div class="half-hero-text-section">
+            <h2>
+              Scratch-Free <br />
+              Soft Inner Layer
+            </h2>
+            <p>
+              The interior of our car cover is designed with a soft inner lining
+              that prevents scratches, keeping your car's paint looking fresh
+              and new.
+            </p>
+          </div>
         </div>
         <div class="half-hero-image-section">
           <picture class="">
