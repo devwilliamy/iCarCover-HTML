@@ -20,7 +20,14 @@
     />
 
     <style>
-      body {
+      #description-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+
+      body,
+      #main-description {
         -webkit-text-size-adjust: 100%;
         max-width: 1160px;
         display: flex;
@@ -132,7 +139,7 @@
 
       .hero-text-section-extra-padding,
       .half-hero-text-section {
-        height: 100%;
+        height: auto;
       }
 
       .hero-text-section h2,
@@ -199,7 +206,7 @@
         align-items: center;
         font-family: "Rubik", sans-serif;
         font-weight: 600;
-        margin-top: 14px;
+        /* margin-top: 14px; */
         margin-right: 15px;
         line-height: 26px;
         font-size: 26px;
@@ -218,6 +225,10 @@
         object-fit: cover;
       }
 
+      .image-section-reverse {
+        flex-direction: row-reverse;
+      }
+
       .car-protection-section .text-section {
         max-width: 477px;
         background-color: #1a1a1a;
@@ -234,6 +245,7 @@
         line-height: 37.92px;
         font-family: "Rubik", sans-serif;
         margin-bottom: 20px;
+        color: #fff;
       }
 
       .car-protection-section .text-section p {
@@ -257,8 +269,19 @@
       .half-hero-feature-section {
         display: flex;
         align-items: center;
-        max-height: 400px;
+        /* max-height: 400px; */
         width: 100%;
+      }
+
+      .half-hero-image-section {
+        /* display: flex; */
+        width: 100%;
+        height: auto;
+      }
+
+      .half-hero-image-section img {
+        width: 100%;
+        height: auto;
       }
 
       .half-hero-text-section {
@@ -317,8 +340,13 @@
       @media (min-width: 1073px) {
         .hero-text-section-extra-padding,
         .half-hero-text-section {
-          margin: 100px 100px;
+          /* margin: 100px 100px; */
           min-width: 370px;
+          width: 100%;
+        }
+
+        .half-hero-text-padding {
+          margin: 50px;
         }
 
         .car-protection-section {
@@ -343,7 +371,8 @@
       }
 
       @media (max-width: 1074px) {
-        body {
+        body,
+        #main-description {
           max-width: 1074px;
         }
 
@@ -475,6 +504,7 @@
         .car-protection-section .text-section h2 {
           font-size: 22px;
           line-height: 28px;
+          color: #ffffff; /* Explicitly set the color */
         }
 
         .car-protection-section .text-section p {
@@ -518,6 +548,8 @@
 
         .half-hero-image-section {
           display: flex;
+          width: 100%;
+          height: auto;
         }
 
         .half-hero-image-section img {
@@ -575,239 +607,251 @@
           height: 30px;
           line-height: 20px;
           font-size: 16px;
-          margin-top: 16px;
+          /* margin-top: 16px; */
         }
       }
     </style>
   </head>
   <body>
-    <section class="car-protection-section">
-      <div class="image-section">
-        <picture>
-          <source srcset="${carData.mainImage}" media="(min-width: 601px)" />
-          <img
-            src="${carData.mainImageMobile}"
-            alt="High-Quality Premium ${vehicleTitle} Cover"
-          />
-        </picture>
-      </div>
-      <div class="overlay">
-        <div class="text-section">
-          <h2>Perfect Fit,<br />Maximum Protection</h2>
-          <p>
-            Custom-fit ${vehicle} covers ensure superior protection, keeping
-            your vehicle fresh and new. Enjoy all-weather durability, waterproof
-            performance, and a snug fit.
-          </p>
-        </div>
-      </div>
-    </section>
-    <section class="hero-feature-section" id="mold-free-section">
-      <div class="hero-text-section hero-text-section-left">
-        <h2>Stay Mold Free<br />With Built-In Air Vents</h2>
-        <p>
-          Our innovative air vents ensure continuous airflow, stopping moisture
-          buildup to keep your ${vehicle} dry. This advanced protection prevents
-          rust and keeps your vehicle looking new and pristine.
-        </p>
-      </div>
-      <div class="hero-image-section">
-        <picture class="image-section">
-          <source
-            class="image-section"
-            srcset="${carData.ventImage}"
-            media="(min-width: 601px)"
-          />
-          <img
-            class="image-section"
-            src="${carData.ventImage}"
-            alt="Keeps You Dry, Breathable by Design"
-          />
-        </picture>
-      </div>
-    </section>
-
-    <section class="hero-feature-section" id="easy-access-section">
-      <div class="hero-image-section">
-        <picture class="image-section">
-          <source
-            class="image-section"
-            srcset="${gridData.side_zipper}"
-            media="(min-width: 601px)"
-          />
-          <img
-            class="image-section"
-            src="${gridData.side_zipper}"
-            alt="Keeps You Dry, Breathable by Design"
-          />
-        </picture>
-      </div>
-      <div class="hero-text-section hero-text-section-right">
-        <h2>
-          Easy Access <br />
-          with Side Zipper
-        </h2>
-        <p>
-          Convenient side zipper allows you to quickly enter your ${vehicle}
-          without removing the cover, providing hassle-free access while
-          maintaining full protection.
-        </p>
-      </div>
-    </section>
-
-    <section class="half-hero-feature-section" id="ultimate-protection-section">
-      <div class="half-hero-image-section">
-        <picture class="">
-          <source
-            class=""
-            srcset="${gridData.waterproof}"
-            media="(min-width: 601px)"
-          />
-          <img
-            class=""
-            src="${gridData.waterproof}"
-            alt="Keeps You Dry, Breathable by Design"
-          />
-        </picture>
-      </div>
-      <div class="half-hero-text-section">
-        <h2>
-          Ultimate Protection <br />
-          Waterproof Fabric
-        </h2>
-        <p>
-          Our ${vehicle} cover features premium waterproof fabric with an extra
-          coating. It shields your vehicle from heavy rain and moisture.
-        </p>
-      </div>
-    </section>
-
-    <section class="half-hero-feature-section" id="scratch-free-section">
-      <div class="half-hero-text-section">
-        <h2>
-          Scratch-Free <br />
-          Soft Inner Layer
-        </h2>
-        <p>
-          The interior of our ${vehicle} cover is designed with a soft inner
-          lining that prevents scratches, keeping your ${vehicle}'s paint
-          looking fresh and new.
-        </p>
-      </div>
-      <div class="half-hero-image-section">
-        <picture class="">
-          <source
-            class=""
-            srcset="${gridData.fabric}"
-            media="(min-width: 601px)"
-          />
-          <img
-            class=""
-            src="${gridData.fabric}"
-            alt="Keeps You Dry, Breathable by Design"
-          />
-        </picture>
-      </div>
-    </section>
-    <section id="enhanced-feature-section">
-      <div class="enhanced-feature-column">
-        <h2>Enhanced Features</h2>
-        <div class="tool-kit-grid">
-          <div class="tool-kit-grid-item">
-            <img
-              src="${gridData.zero_leak}"
-              alt="Zero Leaks"
-              class="grid-image"
-            />
-            <div class="grid-text-box">
-              <h3 class="grid-header">Zero Leaks</h3>
-              <p class="grid-description">
-                Taped seams block water from seeping through, keeping your
-                ${vehicle} completely dry.
+    <div id="description-container">
+      <main id="main-description">
+        <section class="car-protection-section">
+          <div class="image-section">
+            <picture>
+              <source
+                srcset="${carData.mainImage}"
+                media="(min-width: 601px)"
+              />
+              <img
+                src="${carData.mainImageMobile}"
+                alt="Perfect Fit Maximum Protection ${vehicleTitle} Cover"
+              />
+            </picture>
+          </div>
+          <div class="overlay">
+            <div class="text-section">
+              <h2>Perfect Fit,<br />Maximum Protection</h2>
+              <p>
+                Custom-fit ${vehicle} covers ensure superior protection, keeping
+                your vehicle fresh and new. Enjoy all-weather durability,
+                waterproof performance, and a snug fit.
               </p>
             </div>
           </div>
-          <div class="tool-kit-grid-item">
-            <img
-              src="${gridData.wind_strap}"
-              alt="Stay-Put Strap"
-              class="grid-image"
-            />
-            <div class="grid-text-box">
-              <h3 class="grid-header">Stay Secure</h3>
-              <p class="grid-description">
-                Our wind straps hold the cover firmly in place, preventing it
-                from being blown away by strong winds.
+        </section>
+        <section class="hero-feature-section" id="mold-free-section">
+          <div class="hero-text-section hero-text-section-left">
+            <h2>Stay Mold Free<br />With Built-In Air Vents</h2>
+            <p>
+              Our innovative air vents ensure continuous airflow, stopping
+              moisture buildup to keep your ${vehicle} dry. This advanced
+              protection prevents rust and keeps your vehicle looking new and
+              pristine.
+            </p>
+          </div>
+          <div class="hero-image-section">
+            <picture class="image-section">
+              <source
+                class="image-section"
+                srcset="${carData.ventImage}"
+                media="(min-width: 601px)"
+              />
+              <img
+                class="image-section"
+                src="${carData.ventImage}"
+                alt="Stay Mold Free With Built-In Air Vents"
+              />
+            </picture>
+          </div>
+        </section>
+        <section class="hero-feature-section" id="easy-access-section">
+          <div class="hero-image-section">
+            <picture class="image-section image-section-reverse">
+              <source
+                class="image-section"
+                srcset="${gridData.side_zipper}"
+                media="(min-width: 601px)"
+              />
+              <img
+                class="image-section"
+                src="${gridData.side_zipper}"
+                alt="Easy Access with Side Zipper"
+              />
+            </picture>
+          </div>
+          <div class="hero-text-section hero-text-section-right">
+            <h2>
+              Easy Access <br />
+              with Side Zipper
+            </h2>
+            <p>
+              Convenient side zipper allows you to quickly enter your ${vehicle}
+              without removing the cover, providing hassle-free access while
+              maintaining full protection.
+            </p>
+          </div>
+        </section>
+        <section
+          class="half-hero-feature-section"
+          id="ultimate-protection-section"
+        >
+          <div class="half-hero-image-section">
+            <picture class="">
+              <source
+                class=""
+                srcset="${gridData.waterproof}"
+                media="(min-width: 601px)" />
+              <img
+                class=""
+                src="${gridData.waterproof}"
+                alt="Ultimate Waterproof Fabric"
+            /></picture>
+          </div>
+          <div class="half-hero-text-section">
+            <div class="half-hero-text-padding">
+              <h2>
+                Ultimate Protection <br />
+                Waterproof Fabric
+              </h2>
+              <p>
+                Our ${vehicle} cover features premium waterproof fabric with an
+                extra coating. It shields your vehicle from heavy rain and
+                moisture.
               </p>
             </div>
           </div>
-          <div class="tool-kit-grid-item">
-            <img
-              src="${gridData.be_seen}"
-              alt="Stand Out, Stay Safe"
-              class="grid-image"
-            />
-            <div class="grid-text-box">
-              <h3 class="grid-header">Be Seen</h3>
-              <p class="grid-description">
-                Reflective stripes enhance visibility in the dark, keeping your
-                ${vehicle} safe and noticeable at night.
+        </section>
+
+        <section class="half-hero-feature-section" id="scratch-free-section">
+          <div class="half-hero-text-padding">
+            <div class="half-hero-text-section">
+              <h2>
+                Scratch-Free <br />
+                Soft Inner Layer
+              </h2>
+              <p>
+                The interior of our ${vehicle} cover is designed with a soft
+                inner lining that prevents scratches, keeping your ${vehicle}'s
+                paint looking fresh and new.
               </p>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-    <section class="package-includes-section">
-      <div class="package-includes-text-section">
-        <h2>Package Includes</h2>
-        <div class="package-includes-item">
-          <div class="package-includes-item-number">1</div>
-          <div class="package-includes-item-text">
-            <h3>Waterproof Storage Bag</h3>
-            <p>
-              Comes with a waterproof storage bag for easy and convenient
-              storage.
-            </p>
+          <div class="half-hero-image-section">
+            <picture class="">
+              <source
+                class=""
+                srcset="${gridData.fabric}"
+                media="(min-width: 601px)"
+              />
+              <img
+                class=""
+                src="${gridData.fabric}"
+                alt="Keeps You Dry, Breathable by Design"
+              />
+            </picture>
           </div>
-        </div>
-        <div class="package-includes-item">
-          <div class="package-includes-item-number">2</div>
-          <div class="package-includes-item-text">
-            <h3>1 Antenna Patch</h3>
-            <h3>1 Pair of grommets</h3>
-            <p>
-              Worried about fitting the cover over the antenna? Our antenna
-              patch and grommets make it easy to create a custom antenna hole
-              exactly where you need it.
-            </p>
+        </section>
+        <section id="enhanced-feature-section">
+          <div class="enhanced-feature-column">
+            <h2>Enhanced Features</h2>
+            <div class="tool-kit-grid">
+              <div class="tool-kit-grid-item">
+                <img
+                  src="${gridData.zero_leak}"
+                  alt="Tape Seam"
+                  class="grid-image"
+                />
+                <div class="grid-text-box">
+                  <h3 class="grid-header">Zero Leaks</h3>
+                  <p class="grid-description">
+                    Taped seams block water from seeping through, keeping your
+                    ${vehicle} completely dry.
+                  </p>
+                </div>
+              </div>
+              <div class="tool-kit-grid-item">
+                <img
+                  src="${gridData.wind_strap}"
+                  alt="Stay-Put Strap"
+                  class="grid-image"
+                />
+                <div class="grid-text-box">
+                  <h3 class="grid-header">Stay Secure</h3>
+                  <p class="grid-description">
+                    Our wind straps hold the cover firmly in place, preventing
+                    it from being blown away by strong winds.
+                  </p>
+                </div>
+              </div>
+              <div class="tool-kit-grid-item">
+                <img
+                  src="${gridData.be_seen}"
+                  alt="Stand Out, Stay Safe"
+                  class="grid-image"
+                />
+                <div class="grid-text-box">
+                  <h3 class="grid-header">Be Seen</h3>
+                  <p class="grid-description">
+                    Reflective stripes enhance visibility in the dark, keeping
+                    your ${vehicle} safe and noticeable at night.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="package-includes-item">
-          <div class="package-includes-item-number">3</div>
-          <div class="package-includes-item-text">
-            <h3>3 Straps with buckles</h3>
-            <p>
-              No more worries about wind! Our free straps keep your ${vehicle}
-              cover securely in place.
-            </p>
+        </section>
+        <section class="package-includes-section">
+          <div class="package-includes-text-section">
+            <h2>Package Includes</h2>
+            <div class="package-includes-item">
+              <div class="package-includes-item-number">1</div>
+              <div class="package-includes-item-text">
+                <h3>Waterproof Storage Bag</h3>
+                <p>
+                  Comes with a waterproof storage bag for easy and convenient
+                  storage.
+                </p>
+              </div>
+            </div>
+            <div class="package-includes-item">
+              <div class="package-includes-item-number">2</div>
+              <div class="package-includes-item-text">
+                <h3>1 Antenna Patch</h3>
+                <h3>1 Pair of grommets</h3>
+                <p>
+                  Worried about fitting the cover over the antenna? Our antenna
+                  patch and grommets make it easy to create a custom antenna
+                  hole exactly where you need it.
+                </p>
+              </div>
+            </div>
+            <div class="package-includes-item">
+              <div class="package-includes-item-number">3</div>
+              <div class="package-includes-item-text">
+                <h3>3 Straps with buckles</h3>
+                <p>
+                  No more worries about wind! Our free straps keep your
+                  ${vehicle} cover securely in place.
+                </p>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="package-image-section">
-        <picture class="">
-          <source
-            class="image"
-            srcset="${gridData.bag}"
-            media="(min-width: 601px)"
-          />
-          <img
-            class="image"
-            src="${gridData.bag}"
-            alt="Keeps You Dry, Breathable by Design"
-          />
-        </picture>
-      </div>
-    </section>
+          <div class="package-image-section">
+            <picture class="">
+              <source
+                class="image"
+                srcset="${gridData.bag}"
+                media="(min-width: 601px)"
+              />
+              <img
+                class="image"
+                src="${gridData.bag}"
+                alt="Keeps You Dry, Breathable by Design"
+              />
+            </picture>
+          </div>
+        </section>
+      </main>
+    </div>
   </body>
 </html>
